@@ -1,6 +1,0 @@
-What is enterprise Java programming?
-Enterprise Java is the use of Java for application development in enterprise-scale software, and merges a collection of APIs and application servers that implement those APIs. Enterprise Java also includes related technologies, such as the Spring Framework.  
-
-Enterprise Java Beans (EJB), Java Message Service (JMS), Java Persistence API (JPA), Java Transaction API (JTA), and Java Server Faces (JSF) make up the collection of modular tools that enable enterprise needs, such as distributed computing utilizing containers, web services, and high performance applications. 
-
-Enterprises use Java today to build applications utilizing microservices rather than taking a monolithic approach. Enterprise Java is used across government, telecom, banking information systems, accounting, and e-commerce.
