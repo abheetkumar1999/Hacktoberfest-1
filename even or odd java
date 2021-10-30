@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// even or odd
 
 public class EvenOdd {
 
