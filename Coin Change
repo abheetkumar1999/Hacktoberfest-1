@@ -1,0 +1,66 @@
+class Solution {
+    public int coinChange(int[] coins, int amount) {
+        //ArrayList<ArrayList<String>> ls = new ArrayList<>();
+        //solve(coins, amount,ls);
+//         for(int i =0; i< amount+1;i++){
+//             ls.add(new ArrayList<>());
+//             ls.get(i).add("."+i+".");
+//         }
+//         int dp[] = new int[amount+1];
+//         dp[0]=1;
+//         for(int i = 0;i<coins.length;i++){
+//             System.out.print("for "+coins[i]);
+//             for(int j=coins[i];j<dp.length;j++){
+//                 int k=0;
+                
+//                 int curr = dp[j-coins[i]];
+//                 dp[j] = dp[j]+dp[j - coins[i]];
+//                 System.out.print(" "+dp[j]);
+                
+//                 for(String st : ls.get(j)){
+//                     if(st == ""){
+//                         ls.get(k).add(""+coins[i]);
+//                         k++;
+//                     }
+//                     else{
+//                         String tmp = st+""+coins[i];
+//                         ls.get(j).set(k,tmp);
+//                     k++;
+//                     }
+//                 } 
+                
+//             }
+//             System.out.println("");
+//         }
+        
+//         System.out.println("---------------------------Debugg-------------------");
+//         for(int i = 0;i<amount+1;i++){
+            
+//             for(String st : ls.get(i)){
+//                  System.out.print(st);
+//             }
+//             System.out.println(" ");
+//         }
+                
+//                 System.out.println("---------------------------Debugg-------------------");
+//         int min = Integer.MAX_VALUE;
+//         for(String st : ls.get(amount)){
+//             if(st.length() < min){
+//                 min = st.length();
+//             }
+//         }
+//         return min-1;
+//     }
+    //static void solve(ArrayList)
+        int []dp = new int[amount+1];
+        Arrays.fill(dp,amount+1);
+        dp[0] = 0;
+        for(int i=0;i<coins.length;i++){
+            for(int j=coins[i];j<dp.length;j++){
+                dp[j] = Math.min(dp[j],dp[j - coins[i]]+1);
+            }
+        }
+        return dp[amount] == amount+1? -1: dp[amount];
+        
+    }
+}
