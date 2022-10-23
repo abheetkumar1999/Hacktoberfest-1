@@ -1,3 +1,4 @@
+//This code is of fibonacci series.
 Procedure Fibonacci(n)
    declare f0, f1, fib, loop 
    
